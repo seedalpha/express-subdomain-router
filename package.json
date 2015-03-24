@@ -1,0 +1,29 @@
+{
+  "name": "express-subdomain-router",
+  "version": "1.0.0",
+  "description": "Rewrite request url",
+  "main": "lib/express-subdomain-router/index.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:seedalpha/express-subdomain-router.git"
+  },
+  "keywords": [
+    "express",
+    "subdomain",
+    "router"
+  ],
+  "author": "Vladimir Popov <rusintez@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seedalpha/express-subdomain-router/issues"
+  },
+  "homepage": "https://github.com/seedalpha/express-subdomain-router",
+  "devDependencies": {
+    "express": "^4.12.3",
+    "mocha": "^2.2.1",
+    "supertest": "^0.15.0"
+  }
+}
