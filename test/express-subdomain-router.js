@@ -64,4 +64,19 @@ describe('express-subdomain-router', function() {
       .expect(200, done);
   });
   
+  it('should route nested subdomains using deeply nested routers', function(done) {
+    this.app.use(subdomain('g.h.i', express.Router()
+      .use(subdomain('d.e.f', express.Router()
+        .use(subdomain('a.b.c', function(req, res, next) {
+          res.status(200).end();
+        }))
+      )
+    )));
+    
+    request(this.app)
+      .get('/')
+      .set('Host', 'a.b.c.d.e.f.g.h.i.example.com')
+      .expect(200, done);
+  });
+  
 });

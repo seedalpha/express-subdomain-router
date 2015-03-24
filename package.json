@@ -1,6 +1,6 @@
 {
   "name": "express-subdomain-router",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Rewrite request url",
   "main": "lib/express-subdomain-router/index.js",
   "scripts": {
