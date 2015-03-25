@@ -27,15 +27,15 @@ api.use(subdomain('v2', v2)); // matches v2.api.example.com
 // simple multi
 
 var router = express.Router();
-app.use('api.v1, router); // matches api.v1.example.com
+app.use('api.v1', router); // matches api.v1.example.com
 
 // nested multi
 var test = express.Router();
 app.use(subdomain('d.e.f', test));
 
-test.use('a.b.c', function(req, res, next) {
+test.use(subdomain('a.b.c', function(req, res, next) {
   res.send('You\'ve successfully navigated to a.b.c.d.e.f.example.com');
-});
+}));
 
 // wildcard
 var router = express.Router();
